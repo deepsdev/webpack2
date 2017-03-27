@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Aspire Systems Digital</title>
+    <link rel="apple-touch-icon" href="icon.png">
+   	<script src="js/jquery_all.js" ></script>
+    <script src="dist/bundle.js" ></script>
+    <script>
+		
+		var viewport = $('meta[name="viewport"]');
+		if($(window).width() <= 1280 && $(window).width() >= 1000){
+			viewport.attr("content", "width=1024, user-scalable=no"); 
+		}else {
+			viewport.attr("content", "width=device-width, initial-scale=1.0, user-scalable=no"); 
+		}
+		$(window).resize(function(){
+			viewport.attr("content", "width=device-width, user-scalable=no"); 
+			if($(window).width() <= 1280 && $(window).width() >= 1000){
+				viewport.attr("content", "width=1024, user-scalable=no"); 
+			}else {
+				viewport.attr("content", "width=device-width, initial-scale=1.0, user-scalable=no"); 
+			}	
+		});
+	</script>
+</head>
+<body class="home">
+<div id="mainWrap" >
+    <!--  BODY SECTION -->
+    <section style="background: url('images/menu-default.jpg');">
+    	<div id="menu-img-container">
+            <div class="menu-img img-1"></div>
+            <div class="menu-img img-2"></div>
+            <div class="menu-img img-3"></div>
+            <div class="menu-img img-4"></div>
+            <div class="menu-img img-5"></div>
+        </div>
+    	<div class="homeNav">
+        	<div class="homeLogo"><img src="images/logo.png" alt="Aspire Systems Digital"></div>
+            <ul class="navList">
+            	<li rel="img-1"><a href="services.html">Services</a><a href="services.html" class="hover">Services</a></li>
+                <li rel="img-4"><a href="technologies.html">Technologies</a><a href="technologies.html" class="hover">Technologies</a></li>
+                <li rel="img-2"><a href="intro.html">Intro</a><a href="intro.html" class="hover">Intro</a></li>
+			</ul>                
+            <div class="homeSocial">
+            	<a href="https://www.facebook.com/AspireSystems" target="_blank" class="fb"></a>
+                <a href="https://twitter.com/aspiresystems" target="_blank" class="tw"></a>
+                <a href="https://www.linkedin.com/company/aspire-systems?trk=company_name" target="_blank" class="li"></a>
+                <a href="https://www.youtube.com/c/aspiresys" target="_blank" class="yt"></a>
+            </div>
+        </div>
+    </section>
+    <!-- / BODY SECTION -->
+</div>
+<script>
+$(".home .homeNav .navList li")  .mouseenter(function() {
+	$("."+$(this).attr('rel')).addClass('show');
+}).mouseleave(function() {
+	$("."+$(this).attr('rel')).removeClass('show');
+});
+</script>		
+</body>
+</html>

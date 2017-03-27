@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   <!-- <meta http-equiv="refresh" content="55;url=home.html" />-->
+    <title>Aspire Systems Digital</title>
+    <link rel="apple-touch-icon" href="icon.png">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+	<script src="js/jquery_all.js" ></script>
+    <script>
+       document.getElementById('vid1').currentTime = 054;
+   </script>
+  
+</head>
+<body class="intro">
+<div id="mainWrap" >
+    <!-- HEADER -->
+  <header>
+    	<a href="home.html" class="logo"><img src="images/logo.png" alt="Aspire Systems Digital"></a>
+        </header>
+    <!-- / HEADER -->
+    <!-- / BODY SECTION -->
+    <section>
+	    <video id="vid1" controls autobuffer autoplay  class="introVideo" poster="video/poster.jpg" >
+    	<source src="video/Aspire.mp4" type="video/mp4" />
+            <p>THIS VIDEO IS NOT SUPPORTING IN YOUR BROWSER</p>
+		</video>
+               
+  <div class="overlay ">
+      <p class="continue" style="float:right;"> <a href="home.html" >Skip intro</a></p>
+    </div>
+    </section>
+    <!-- / BODY SECTION -->
+    
+</div>
+
+<script src="text/javascript">
+
+function playVideo(){
+    var video = document.getElementById('vid1');
+    video.play();
+    video.addEventListener('ended',function(){
+        window.location = 'http://www.google.com';
+    });
+}
+</script>
+</body>
+</html>
